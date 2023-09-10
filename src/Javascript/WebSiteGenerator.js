@@ -35,17 +35,26 @@ generateMainContent(mainTitle, mainText) {
     const customNav = document.createElement('nav')
     const customUl = document.createElement('ul')
 
-    const customLi = document.createEleme
-    const a = document.createElement('a')
+    const navItems = [
+      ['Home', './index.html'],
+      ['About', './about.html'],
+      ['About', './about.html']
+    ];
 
-    customLi.appendChild(a)
-    customUl.appendChild(customLi);
+    for (const [i,j] of navItems){
+      const customLi = document.createElement('li')
+      const a = document.createElement('a')
+      a.href = j;
+      a.textContent = i; 
 
+      customLi.appendChild(a)
+      customUl.appendChild(customLi);
+    }    
 
     customNav.appendChild(customUl);
 
     return customNav;
-    
+
     }
 
     
