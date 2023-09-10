@@ -31,15 +31,11 @@ generateMainContent(mainTitle, mainText) {
   return mainContent;
   }
 
-  generateNav() {
+    // Function to generate 
+  generateNav(navItems) {
+
     const customNav = document.createElement('nav')
     const customUl = document.createElement('ul')
-
-    const navItems = [
-      ['Home', './index.html'],
-      ['About', './about.html'],
-      ['About', './about.html']
-    ];
 
     for (const [i,j] of navItems){
       const customLi = document.createElement('li')
