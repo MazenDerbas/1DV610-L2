@@ -6,16 +6,24 @@ export class WebSiteGenerator {
     // Function to generate a header element with a custom name
 generateHeader(headerText) {
     const customHeader = document.createElement('header');
-    customHeader.innerHTML = `<h1>${headerText}</h1>`
-    return customHeader;
-  }
+    customHeader.innerHTML = `
+
+    <style>
+      header{
+        text-align: center;
+      }
+    </style>
+
+    <h1>${headerText}</h1>`
+    document.body.appendChild(customHeader);
+  } 
 
 
   // Function to generate 
 generateFooter(footerText) {
   const customFooter = document.createElement('footer');
   customFooter.innerHTML = `<p> &copy; ${new Date().getFullYear()} ${footerText} </p>`; 
-  return customFooter;
+  document.body.appendChild(customFooter);
   }
 
   // Function to generate 
@@ -28,7 +36,7 @@ generateMainContent(mainTitle, mainText) {
     `;
 
   mainContent.appendChild(content);
-  return mainContent;
+  document.body.appendChild(mainContent);
   }
 
     // Function to generate 
@@ -49,11 +57,12 @@ generateMainContent(mainTitle, mainText) {
 
     customNav.appendChild(customUl);
 
-    return customNav;
+    document.body.appendChild(customNav)
 
     }
 
-    
+  
+
   } 
 
 

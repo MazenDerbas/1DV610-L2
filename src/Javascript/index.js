@@ -14,13 +14,11 @@ const navItems = [
     ['About', './about.html'],
     ['Contact', './contact.html']
   ];
-  const customNav = webSiteTemplate.generateNav(navItems);
+
+const customNav = webSiteTemplate.generateNav(navItems);
 
 const customMaincontent = webSiteTemplate.generateMainContent('This is main content ','Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, rerum iure quisquam quaerat at maxime facilis perspiciatis accusantium asperiores laudantium repellendus vitae doloremque harum maiores unde tempora reiciendis excepturi. Optio.')
 
 
-document.body.appendChild(customHeader1);
-document.body.appendChild(customHeader2);
-document.body.appendChild(customFooter);
-document.body.appendChild(customNav);
-document.body.appendChild(customMaincontent)
+
+
